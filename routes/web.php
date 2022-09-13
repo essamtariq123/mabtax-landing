@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/', 'welcome')->name('home');
 Route::view('/tax-calculator', 'tax-calculator')->name('tax-calculator');
+Route::view('/ntn-status', 'ntn-status')->name('ntn-status');
+Route::view('/contact', 'contact')->name('contact');

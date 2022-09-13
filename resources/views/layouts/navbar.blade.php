@@ -2,7 +2,7 @@
     <div class="container nav-container">
         <div class="responsive-mobile-menu">
             <div class="logo-wrapper">
-                <a href="index.html" class="logo">
+                <a href="{{ route('home') }}" class="logo">
                     <img style="width:50%;" src="{{ asset('img/logo.png') }}" alt="">
                 </a>
             </div>
@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
             <ul class="navbar-nav">
                 <li class="current-menu-item"><a href="{{ route('tax-calculator') }}">Tax Calculator</a></li>
-                <li><a href="#what">NTN Status</a></li>
+                <li><a href="{{ route('ntn-status') }}">NTN Status</a></li>
                 <li class="menu-item-has-children">
                     <a href="#">Services</a>
                     <ul class="sub-menu">
@@ -23,8 +23,8 @@
                         <li><a href="how-it-work.html">Intellectual Property</a></li>
                     </ul>
                 </li>
-                <li><a href="#what">FAQ</a></li>
-                <li><a href="#work">Contact Us</a></li>
+                {{-- <li><a href="#what">FAQ</a></li> --}}
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
             </ul>
         </div>
         <div class="nav-right-content">

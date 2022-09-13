@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
-    <link rel="icon" type="image/png" href="{{ asset('/img/logo-tab.png')}}">
+    <link rel="icon" type="image/png" href="{{ asset('/img/icon.png')}}">
 </head>
 
 <body>

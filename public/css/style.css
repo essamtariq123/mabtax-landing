@@ -1416,7 +1416,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     ## Breadcumb 
 ----------------------*/
 .breadcrumb-area {
-  background-image: linear-gradient(50deg, #5e2ced 0%, #9749f8 100%);
+  background-image: linear-gradient(50deg, #ff6661 0%, #9749f8 100%);
   position: relative;
   z-index: 0;
   background-size: cover;
@@ -6494,7 +6494,7 @@ Client Area
 }
 
 .organizations-header-section {
-  background-image: linear-gradient(50deg, #5e2ced 0%, #9749f8 100%);
+  background-image: linear-gradient(50deg, #ff6661 0%, #9749f8 100%);
 }
 .organizations-header-section .organizations-header-wrap {
   padding-top: 115px;
@@ -7539,7 +7539,7 @@ Client Area
   line-height: 34px;
   margin-bottom: 10px;
   display: block;
-  color: #5e2ced;
+  color: #ff6661;
 }
 .single-contact-item .content .details {
   font-size: 14px;
@@ -7557,7 +7557,7 @@ Client Area
   text-align: center;
   margin-right: 20px;
   font-size: 30px;
-  color: #5e2ced;
+  color: #ff6661;
   transition: all 0.3s ease-in;
 }
 .single-contact-item-02 .content {
@@ -7569,7 +7569,7 @@ Client Area
   line-height: 34px;
   margin-bottom: 10px;
   display: block;
-  color: #5e2ced;
+  color: #ff6661;
 }
 .single-contact-item-02 .content .details {
   font-size: 24px;
@@ -7661,7 +7661,7 @@ Client Area
   font-size: 14px;
 }
 .contact-page-form .form-group .submit-btn {
-  background-image: linear-gradient(50deg, #5e2ced 0%, #9749f8 100%);
+  background-image: linear-gradient(50deg, #ff6661 0%, #9749f8 100%);
   color: #fff;
   display: inline-block;
   border: none;
@@ -7673,7 +7673,7 @@ Client Area
   font-weight: 600;
 }
 .contact-page-form .form-group .submit-btn:hover {
-  background-image: linear-gradient(50deg, #9749f8 0%, #5e2ced 100%);
+  background-image: linear-gradient(50deg, #9749f8 0%, #ff6661 100%);
 }
 .contact-page-form .form-group .submit-btn.style-01 {
   background-image: initial;

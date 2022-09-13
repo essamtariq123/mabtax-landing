@@ -5,7 +5,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer-widget widget">
                         <div class="about_us_widget">
-                            <a href="index.html" class="footer-logo"> <img style="width:25%;" src="{{ asset('img/logo.png') }}" alt="footer logo"></a>
+                            <a href="{{ route('home') }}" class="footer-logo"> <img style="width:25%;" src="{{ asset('img/logo.png') }}" alt="footer logo"></a>
                         </div>
                     </div>
                     <div class="widget widget_nav_menu">

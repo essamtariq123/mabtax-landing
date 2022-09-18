@@ -6,29 +6,36 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="section-title startup padding-bottom-25">
-                        <h4 class="title">Our business services</h4>
+                        <h4 class="title">{{$services->title}}</h4>
                         <p>Registering a business can be a quite stressful. Worry not! Get expert assistance on how and
                             which business structure to select and start your entrepreneurial journey with a bang!</p>
                     </div>
                     <div class="contact-img bg-image-02"></div>
                 </div>
             </div>
+            @foreach($services->sub_services as $service)
             <div class="row mb-4">
                 <div class="col-lg-12">
                     <div class="mabtax-card">
                         <div class="mabtax-row two-column">
                             <div class="left-column">
                                 <div class="main__title">
-                                    <h4>NTN Registration – Salaried</h4>
+                                    <h4>{{ $service->title }}</h4>
                                 </div>
                             </div>
                             <div class="right-column">
                                 <div class="title__price">
-                                    <h4>Rs. 400</h4>
+                                    <h4>Rs. {{ $service->price }}</h4>
                                 </div>
+                                @isset($service->other_price)
+                                <div class="title__price">
+                                    <h4>Rs. {{ $service->other_price }}</h4>
+                                </div>
+                                @endisset
                             </div>
                         </div>
                 
+                        @isset($service->time)
                         <div class="mabtax-row two-column">
                             <div class="left-column">
                                 <div class="time__title">
@@ -37,19 +44,19 @@
                             </div>
                             <div class="right-column">
                                 <div class="time-period">
-                                    <p>1 - 2 Working Days</p>
+                                    <p>{{ $service->time }}</p>
                                 </div>
                             </div>
                         </div>
+                        @endisset
                 
                         <div class="mabtax-row">
                             <div class="check-list">
                                 <h3>Requirements:</h3>
                                 <ul>
-                                    <li>✓ Color copy of CNIC</li>
-                                    <li>✓ Latest paid electricity bill</li>
-                                    <li>✓ Phone Number</li>
-                                    <li>✓ Email address</li>
+                                    @foreach($service->requirements as $require)
+                                    <li>✓ {{ $require->title}}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -65,58 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-4">
-                <div class="col-lg-12">
-                    <div class="mabtax-card">
-                        <div class="mabtax-row two-column">
-                            <div class="left-column">
-                                <div class="main__title">
-                                    <h4>NTN Registration – Salaried</h4>
-                                </div>
-                            </div>
-                            <div class="right-column">
-                                <div class="title__price">
-                                    <h4>Rs. 400</h4>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="mabtax-row two-column">
-                            <div class="left-column">
-                                <div class="time__title">
-                                    <p>Completion Time:</p>
-                                </div>
-                            </div>
-                            <div class="right-column">
-                                <div class="time-period">
-                                    <p>1 - 2 Working Days</p>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="mabtax-row">
-                            <div class="check-list">
-                                <h3>Requirements:</h3>
-                                <ul>
-                                    <li>✓ Color copy of CNIC</li>
-                                    <li>✓ Latest paid electricity bill</li>
-                                    <li>✓ Phone Number</li>
-                                    <li>✓ Email address</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mabtax-row">
-                            <div class="ctas">
-                                <div class="btn-wrapper">
-                                    <a href="#" class="boxed-btn btn-business">Get In Touch</a>
-                                    <a style="width: 44px; padding:0" href="#" class="boxed-btn btn-business"><img src="{{ asset('img/whatsapp.png') }}" alt=""></a>
-                                </div>
-                                {{-- <a class="request-btn" href="#">Request to call</a> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 @endsection

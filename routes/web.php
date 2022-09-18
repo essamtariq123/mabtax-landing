@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,11 @@ Route::view('/tax-calculator', 'tax-calculator')->name('tax-calculator');
 Route::view('/ntn-status', 'ntn-status')->name('ntn-status');
 Route::view('/contact', 'contact')->name('contact');
 
-Route::view('/services/income-tax', 'services/income-tax')->name('income-tax');
-Route::view('/services/intellectual-property', 'services/intellectual-property')->name('intellectual-property');
-Route::view('/services/company-registration', 'services/company-registration')->name('company-registration');
-Route::view('/services/sales-tax', 'services/sales-tax')->name('sales-tax');
+
+Route::get('/services/income-tax', [ServiceController::class,'incomeTax'])->name('income-tax');
+Route::get('/services/intellectual-property', [ServiceController::class,'intellectualProperty'])->name('intellectual-property');
+Route::get('/services/company-registration', [ServiceController::class,'companyRegistration'])->name('company-registration');
+Route::get('/services/sales-tax', [ServiceController::class,'salesTax'])->name('sales-tax');
 
 
 //Mail

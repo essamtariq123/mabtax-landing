@@ -17,10 +17,10 @@
                 <li class="menu-item-has-children">
                     <a href="#">Services</a>
                     <ul class="sub-menu">
-                        <li><a href="about.html">Income Tax Return</a></li>
-                        <li><a href="contact.html">Sales Tax Registration</a></li>
-                        <li><a href="service.html">Company's Registration</a></li>
-                        <li><a href="how-it-work.html">Intellectual Property</a></li>
+                        <li><a href="{{ route('income-tax') }}">Income Tax Return</a></li>
+                        <li><a href="{{ route('sales-tax') }}">Sales Tax Registration</a></li>
+                        <li><a href="{{ route('company-registration') }}">Company's Registration</a></li>
+                        <li><a href="{{ route('intellectual-property') }}">Intellectual Property</a></li>
                     </ul>
                 </li>
                 {{-- <li><a href="#what">FAQ</a></li> --}}

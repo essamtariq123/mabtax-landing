@@ -55,7 +55,7 @@
                                     <h3>Requirements:</h3>
                                     <ul>
                                         @foreach ($service->requirements as $require)
-                                            <li>✓ {{ $require->title }}</li>
+                                            <li><span style="color:#ff6661">✓</span> {{ $require->title }}</li>
                                         @endforeach
                                     </ul>
                                 </div>

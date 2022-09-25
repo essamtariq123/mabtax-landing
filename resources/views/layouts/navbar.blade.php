@@ -29,7 +29,7 @@
         </div>
         <div class="nav-right-content">
             <div class="btn-wrapper">
-                <a href="#" class="boxed-btn btn-business">Get In Touch</a>
+                <a target="_blank" href="https://wa.me/923214499907" class="boxed-btn btn-business">Get In Touch</a>
             </div>
         </div>
     </div>

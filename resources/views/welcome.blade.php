@@ -453,7 +453,7 @@
                 <div class="col-lg-4">
                     <div class="section-title startup padding-bottom-25">
                         <h4 class="title">Let’s scale your brand, together</h4>
-                        <p>Get a start@oxo.com</p>
+                        {{-- <p>Get a start@oxo.com</p> --}}
                     </div>
                     <div class="contact-img bg-image-02"
                         style="background-image: url({{ asset('img/contact/cover-4.png') }});"></div>

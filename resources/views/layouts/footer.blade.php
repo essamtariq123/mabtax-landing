@@ -5,7 +5,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer-widget widget">
                         <div class="about_us_widget">
-                            <a href="{{ route('home') }}" class="footer-logo"> <img style="width:25%;" src="{{ asset('img/logo.png') }}" alt="footer logo"></a>
+                            <a href="{{ route('home') }}" class="footer-logo"> <img style="width:25%;"
+                                    src="{{ asset('img/logo.png') }}" alt="footer logo"></a>
                         </div>
                     </div>
                     <div class="widget widget_nav_menu">
@@ -14,48 +15,42 @@
                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget style-01 widget widget_nav_menu">
-                        <h4 class="widget-title">Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Pricing</a></li>
-                        </ul>
+                        <h4 class="widget-title">Need Support?</h4>
+                        <div class="single-contact-item-02">
+                            <div class="icon">
+                                <i class="flaticon-call"></i>
+                            </div>
+                            <div class="content">
+                                <p class="details">+92 3214499907</p>
+                            </div>
+                        </div>
+                        <div class="single-contact-item-02">
+                            <div class="icon">
+                                <i class="flaticon-email"></i>
+                            </div>
+                            <div class="content">
+                                <p class="details">email@mabtax.com</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget style-01 widget widget_nav_menu">
-                        <h4 class="widget-title">Products</h4>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="footer-widget style-01 widget widget_nav_menu">
-                        <h4 class="widget-title">Resources</h4>
-                        <ul>
-                            <li><a href="#">FAQ’S</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="footer-widget style-01 widget widget_nav_menu">
-                        <h4 class="widget-title">Relevent</h4>
-                        <ul>
-                            <li><a href="#">Why</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Customers</a></li>
-                        </ul>
+                        <h4 class="widget-title">Locate Us</h4>
+                        <div class="single-contact-item-02">
+                            <div class="icon">
+                                <i class="flaticon-pin"></i>
+                            </div>
+                            <div class="content">
+                                <p class="details">Office #17, 3rd Floor Sadiq Plaza, Mall Rd Lahore, Pakistan</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,3 +68,9 @@
         </div>
     </div>
 </footer>
+
+<style>
+    .widget .widget-title {
+        font-size: 25px !important;
+    }
+</style>

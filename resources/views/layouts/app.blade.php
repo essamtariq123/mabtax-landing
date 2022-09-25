@@ -29,6 +29,9 @@
 
     @yield('styles')
 
+
+    @yield('modal')
+
     <!-- preloader area start -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">

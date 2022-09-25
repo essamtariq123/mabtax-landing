@@ -33,5 +33,6 @@ Route::get('/services/sales-tax', [ServiceController::class,'salesTax'])->name('
 
 //Mail
 Route::post('contact-us', [MailController::class,'contactUs'])->name('contact-us');
+Route::post('service-query', [MailController::class,'serviceQuery'])->name('service-query');
 
 

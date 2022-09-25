@@ -2901,9 +2901,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     background-color: #fff;
   }
   .navbar-area.nav-style-02 .nav-container .navbar-collapse .navbar-nav {
-    background-color: var(--main-color-two);
+    background-color: #ff6661;
     padding: 0 20px;
   }
+  .navbar-area.nav-style-02 .nav-container .nav-right-content {
+    display: none;
+    align-items: center;
+  }
+  .contact-area .bg-image-02 {
+    display:none
+  }
+  .mabtax-card {
+    width: 100% !important;
+}
   .navbar-area.nav-style-02 .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.8);

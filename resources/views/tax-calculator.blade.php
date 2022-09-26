@@ -86,6 +86,9 @@
             font-weight: 500;
             padding: 15px;
         }
+        .table {
+            table-layout: fixed
+        }
     </style>
 @endsection
 @section('script')

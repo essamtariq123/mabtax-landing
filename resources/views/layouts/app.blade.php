@@ -21,8 +21,9 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+    @vite('resources/scss/app.scss')
 
-    <link rel="icon" type="image/png" href="{{ asset('/img/icon.png')}}">
+    <link rel="icon" type="image/png" sizes="20x20" href="{{ asset('/img/whatsapp-logo.png')}}">
 </head>
 
 <body>

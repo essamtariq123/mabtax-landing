@@ -42,3 +42,7 @@ Route::post('contact-us', [MailController::class,'contactUs'])->name('contact-us
 Route::post('service-query', [MailController::class,'serviceQuery'])->name('service-query');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

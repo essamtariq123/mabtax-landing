@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="work-single-item-02">
                             <div class="icon">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!--Create Content-->
@@ -427,79 +427,26 @@
         </div>
     </div>
     <!-- Call to action -->
-    <div class="call-to-action-area bg-image">
+    <div class="call-to-action-area bg-image mb-3">
         <div class="container">
-            <div class="call-to-action-inner style-06">
+            <div class="">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <h2 class="title">Try fror 7 days free</h2>
-                        <p class="subtitle">Each time a digital asset is purchased or sold, Sequoir donates a percentage of
-                            the fees back.</p>
-                        <form class="subscribe-form" action="index.html">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your email address">
-                            </div>
-                            <button type="submit" class="submit-btn">Try It Now</button>
-                        </form>
+                        <h2 class="title">Our Partners & Collaborators</h2>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slide-track">
+                        @for ($i = 1; $i < 14; $i++)
+                        <div class="slide">
+                            <img src="{{ asset("img/client/partner_$i.png") }}" height="75" width="90" alt="" />
+                        </div>
+                        @endfor
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- contact-area  -->
-    <div class="contact-area padding-top-115 padding-bottom-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="section-title startup padding-bottom-25">
-                        <h4 class="title">Let’s scale your brand, together</h4>
-                        {{-- <p>Get a start@oxo.com</p> --}}
-                    </div>
-                    <div class="contact-img bg-image-02"
-                        style="background-image: url({{ asset('img/contact/cover-4.png') }});"></div>
-                </div>
-                <div class="col-lg-6 offset-lg-2">
-                    <div class="contact-form style-01">
-                        <form action="contact.php" id="contact_page_form" class="contact-page-form" method="post"
-                            novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="name">Name <span>*</span></label>
-                                        <input type="text" name="name" placeholder="Type Name"
-                                            class="form-control" required="" aria-required="true">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="phone">Phone <span>*</span></label>
-                                        <input type="text" name="phone" placeholder="Type Phone Number"
-                                            class="form-control" required="" aria-required="true">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="email">Email Address <span>*</span></label>
-                                        <input type="text" name="email" placeholder="Type Email Address"
-                                            class="form-control" required="" aria-required="true">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="message">How can we help? <span>*</span></label>
-                                        <textarea name="message" id="msg" cols="1" rows="4" placeholder="Type Desciption"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="submit" value="Send Message" class="submit-btn style-01">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 @endsection

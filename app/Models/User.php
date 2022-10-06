@@ -41,4 +41,30 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+     /**
+     * Enter your own logic (e.g. if ($this->id === 1) to
+     *   enable this user to be able to add/edit blog posts
+     *
+     * @return bool - true = they can edit / manage blog posts,
+     *        false = they have no access to the blog admin panel
+     */
+    public function canManageBinshopsBlogPosts()
+    {
+        return $this->email === "admin@mabtax.com";
+
+        // if ($this->email === "admin@mabtax.com"
+        //    ){
+
+        //    // return true so this user CAN edit/post/delete
+        //    // blog posts (and post any HTML/JS)
+
+        //    return true;
+        // }
+
+        // // otherwise return false, so they have no access
+        // // to the admin panel (but can still view posts)
+
+        // return false;
+    }
 }

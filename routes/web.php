@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BinshopsReaderController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
@@ -16,10 +17,12 @@ use App\Http\Controllers\ServiceController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+
+Route::get('/{locale}/blog', [BinshopsReaderController::class,'index'])->name('blog');
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/tax-calculator', [HomeController::class,'taxCalculator'])->name('tax-calculator');
 Route::get('/ntn-status', [HomeController::class,'ntnStatus'])->name('ntn-status');
@@ -45,4 +48,4 @@ Route::post('service-query', [MailController::class,'serviceQuery'])->name('serv
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

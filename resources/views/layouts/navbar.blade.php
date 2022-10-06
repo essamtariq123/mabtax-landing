@@ -25,6 +25,7 @@
                 </li>
                 {{-- <li><a href="#what">FAQ</a></li> --}}
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('blog',['locale' => "en"]) }}">Blog</a></li>
             </ul>
         </div>
         <div class="nav-right-content">

@@ -16,7 +16,8 @@
                         <p>MabTax now provides 360 solutions to all your Business needs, including Business Incorporation
                             and Trademark Registration in Pakistan</p>
                         <div class="btn-wrapper padding-top-30">
-                            <a href="#" class="boxed-btn btn-business">Start Tax Filing</a>
+                            <a href="#" class="boxed-btn btn-business" data-toggle="modal"
+                                data-target="#service1">Free NTN Register</a>
                         </div>
                     </div>
                     <!-- //.header inner -->
@@ -98,15 +99,13 @@
                             <div class="cover-img bg-image-02 wow animate__animated animate__backInUp"
                                 style="background-image: url({{ asset('img/cover/08.png') }});"></div>
                         </div>
-                        <div class="col-lg-5 offset-lg-2">
+                        <div class="col-lg-6 offset-lg-2">
                             <div class="unique-content-area">
                                 <div class="section-title white brand">
-                                    <h4 class="title">We’re obsessed with growth</h4>
-                                    <p>Each time a digital asset is purchased or sold, Sequoir donates a percentage of the
-                                        fees back into the development of the asset through its charitable foundation.</p>
-                                    <div class="btn-wrapper padding-top-30">
-                                        <a href="#" class="boxed-btn btn-business blank">Sign Up For Free</a>
-                                    </div>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zm7SPaFOLZc"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -438,9 +437,10 @@
                 <div class="slider">
                     <div class="slide-track">
                         @for ($i = 1; $i < 14; $i++)
-                        <div class="slide">
-                            <img src="{{ asset("img/client/partner_$i.png") }}" height="75" width="90" alt="" />
-                        </div>
+                            <div class="slide">
+                                <img src="{{ asset("img/client/partner_$i.png") }}" height="75" width="90"
+                                    alt="" />
+                            </div>
                         @endfor
                     </div>
                 </div>
@@ -449,4 +449,87 @@
     </div>
     <!-- contact-area  -->
 
+    <div class="modal" id="service1" tabindex="-1" role="dialog" aria-labelledby="serviceLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceLabel">Have queries? Talk to an expert</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="contact-form style-01">
+                        <form action="{{ route('service-query') }}" class="contact-page-form" method="POST">
+                            @csrf
+                            <div class="row">
+                                @if (session()->has('message'))
+                                    <div class="col-md-12">
+                                        <div class="alert alert-success">
+                                            {{ session()->get('message') }}
+                                            <button type="button" class="close" data-dismiss="alert"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                @endif
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="phone">Phone <span>*</span></label>
+                                        <input type="text" name="phone" placeholder="Type Phone Number"
+                                            class="form-control" required="" aria-required="true">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="email">Email Address <span>*</span></label>
+                                        <input type="text" name="email" placeholder="Type Email Address"
+                                            class="form-control" required="" aria-required="true">
+                                    </div>
+                                </div>
+                                {{-- <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="message">CNIC (front & back)</label>
+                                        <div class="dropzone" id="myDropzone"></div>
+                                    </div>
+                                </div> --}}
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" value="Submit" class="submit-btn style-01">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+@section('styles')
+    <style>
+        .section-wrapper.bg-image {
+            z-index: unset !important
+        }
+    </style>
+@endsection
+{{-- @section('script')
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <script>
+        Dropzone.options.myDropzone = { // camelized version of the `id`
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 2, // MB
+            accept: function(file, done) {
+                if (file.name == "justinbieber.jpg") {
+                    done("Naha, you don't.");
+                } else {
+                    done();
+                }
+            }
+        };
+    </script>
+@endsection --}}

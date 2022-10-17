@@ -3505,7 +3505,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 .header-area.header-startup .header-inner .header-form-area .submit-btn {
   border-radius: 5px;
-  background-color: var(--secondary-color);
+  background-color: #ff6661;
   padding: 15px 15px;
   font-weight: 600;
   color: #fff;
@@ -3513,9 +3513,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border: 1px solid var(--secondary-color);
 }
 .header-area.header-startup .header-inner .header-form-area .submit-btn:hover {
-  background-color: var(--main-color-two);
+  background-color: var(--secondary-color);
   color: #fff;
-  border: 1px solid var(--main-color-one);
+  border: 1px solid var(--secondary-color);
 }
 .header-area.header-startup .header-inner .vdo-btn .video-play {
   color: #fff;

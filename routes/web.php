@@ -27,6 +27,7 @@ Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/tax-calculator', [HomeController::class,'taxCalculator'])->name('tax-calculator');
 Route::get('/ntn-status', [HomeController::class,'ntnStatus'])->name('ntn-status');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+Route::get('/services', [HomeController::class,'services'])->name('services');
 
 // Route::view('/', 'welcome')->name('home');
 // Route::view('/tax-calculator', 'tax-calculator')->name('tax-calculator');
@@ -42,6 +43,7 @@ Route::get('/services/sales-tax', [ServiceController::class,'salesTax'])->name('
 
 //Mail
 Route::post('contact-us', [MailController::class,'contactUs'])->name('contact-us');
+Route::post('free-consult', [MailController::class,'freeConsult'])->name('free-consult');
 Route::post('service-query', [MailController::class,'serviceQuery'])->name('service-query');
 
 

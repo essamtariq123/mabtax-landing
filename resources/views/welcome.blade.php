@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="header-area header-business">
+    <div class="header-area header-business header-startup">
         <div class="business-bg-img wow animate__animated animate__zoomIn" data-parallax='{"x": 220, "y": 100}'
             style="background-image:url({{ asset('img/header-slider/business/02.png') }});"></div>
         <div class="business-bg-img-02 wow animate__animated animate__zoomIn"
@@ -15,10 +15,16 @@
                         <h3 class="title-inner">Going beyond NTN and Income Tax Filing</h3>
                         <p>MabTax now provides 360 solutions to all your Business needs, including Business Incorporation
                             and Trademark Registration in Pakistan</p>
-                        <div class="btn-wrapper padding-top-30">
-                            <a href="#" class="boxed-btn btn-business" data-toggle="modal"
-                                data-target="#service1">Free NTN Register</a>
-                        </div>
+                        <form action="{{ route('free-consult') }}" method="POST">
+                            <div class="header-form-area">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter phone number" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="submit-btn">Free Consultation</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <!-- //.header inner -->
                 </div>

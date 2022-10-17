@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOMeta;
 
@@ -25,5 +26,13 @@ class HomeController extends Controller
     public function contact() {
         SEOMeta::setTitle('Contact Us');
         return view('contact');
+    }
+
+    public function services() {
+
+        $services  = Service::all();
+
+        SEOMeta::setTitle('Services');
+        return view('services.main', compact('services'));
     }
 }

@@ -15,7 +15,7 @@
                 <li class="current-menu-item"><a href="{{ route('tax-calculator') }}">Tax Calculator</a></li>
                 <li><a href="{{ route('ntn-status') }}">NTN Status</a></li>
                 <li class="menu-item-has-children">
-                    <a href="#">Services</a>
+                    <a href="{{ route('services') }}">Services</a>
                     <ul class="sub-menu">
                         <li><a href="{{ route('income-tax') }}">Income Tax Return</a></li>
                         <li><a href="{{ route('sales-tax') }}">Sales Tax Registration</a></li>

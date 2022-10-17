@@ -16,15 +16,16 @@ class ServiceSeeder extends Seeder
     public function run()
     {
         $services = [
-            'Income Tax Return',
-            'Sales Tax Registration',
-            "Company's Registration",
-            "Intellectual Property"
+            ['name' => 'Income Tax Return', 'slug' => 'income-tax'],
+            ['name' => 'Sales Tax Registration', 'slug' => 'sales-tax'],
+            ['name' => "Company's Registration", 'slug' => 'company-registration'],
+            ['name' => "Intellectual Property", 'slug' => 'intellectual-property']
         ];
 
         foreach($services as $service) {
             Service::create([
-                'title' => $service
+                'title' => $service['name'],
+                'slug' => $service['slug']
             ]);
         }
     }

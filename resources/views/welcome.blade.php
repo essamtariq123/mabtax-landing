@@ -16,6 +16,7 @@
                         <p>MabTax now provides 360 solutions to all your Business needs, including Business Incorporation
                             and Trademark Registration in Pakistan</p>
                         <form action="{{ route('free-consult') }}" method="POST">
+                            @csrf
                             <div class="header-form-area">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Enter phone number" required>

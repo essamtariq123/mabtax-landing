@@ -22,13 +22,55 @@
                                     <input type="text" class="form-control" placeholder="Enter phone number" required>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="submit-btn">Free Consultation</button>
+                                    <button type="submit" class="submit-btn style-01">Free Consultation</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <!-- //.header inner -->
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="pricing" class="price-plan-area padding-top-110 padding-bottom-80">
+        <div class="bg-img" style="background-image: url(assets/img/bg/social/01.png);"></div>
+        <div class="bg-img-02" style="background-image: url(assets/img/bg/social/02.png);"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center margin-bottom-55">
+                        <h3 class="title social-title">Top selling services</h3>
+                        {{-- <p>Inspiration comes in many ways and you like to save everything from. </p> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($services as $service)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-price-plan-01">
+                            <div class="price-header">
+                                <h4 class="title">{{ $service->title }}</h4>
+                                <div class="img-icon"><img src="assets/img/price-plan/01.png" alt=""></div>
+                            </div>
+                            <div class="price-wrap mb-3">
+                                {{-- <span class="price">$0</span><span class="month">/mo</span> --}}
+                                <span class="price">RS {{ $service->formatted_price }}</span>
+                            </div>
+                            {{-- <div class="price-body">
+                            <ul>
+                                <li><i class="fa fa-check success"></i> 8 Social Accounts</li>
+                                <li><i class="fa fa-check success"></i> 100 Schedule Posts</li>
+                                <li><i class="fa fa-check success"></i> 1 User</li>
+                            </ul>
+                        </div> --}}
+                            <div class="price-footer mt-3">
+                                <div class="btn-wrapper">
+                                    <a href="{{ route($service->service->slug) }}" class="boxed-btn btn-startup">check service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -121,7 +163,7 @@
             </div>
         </div>
     </div>
-    <!--Create Content-->
+    {{-- <!--Create Content-->
     <div class="cover-your-area padding-top-110 margin-bottom-120">
         <div class="container">
             <div class="row justify-content-center">
@@ -151,9 +193,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--Build Us -->
-    <div id="why" class="cover-your-area padding-bottom-120">
+    {{-- <div id="why" class="cover-your-area padding-bottom-120">
         <div class="container">
             <div class="cover-your-wrap">
                 <div class="row">
@@ -173,9 +215,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- testimonial area start  -->
-    <section class="testimonial-area padding-bottom-120">
+    <section class="testimonial-area padding-top-110 padding-bottom-120">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -520,6 +562,32 @@
     <style>
         .section-wrapper.bg-image {
             z-index: unset !important
+        }
+
+        .single-price-plan-01 .price-header .title {
+            font-size: 20px;
+        }
+
+        .single-price-plan-01 .price-footer {
+            margin-top: 35px !important
+        }
+
+        .single-price-plan-01 .price-footer .btn-wrapper .boxed-btn {
+            background-image: linear-gradient(-125deg, #fb3c7f 0%, #ffc05e 100%);
+            padding: 12px 40px;
+        }
+
+        .single-price-plan-01 .price-footer .btn-wrapper .boxed-btn:hover {
+            background-image: linear-gradient(125deg, #fb3c7f 0%, #ffc05e 100%);
+        }
+
+        .header-inner .header-form-area .submit-btn {
+            border-radius: 5px;
+            background-color: #ff6661 !important;
+            padding: 15px;
+            font-weight: 600;
+            color: #fff;
+            border: 1px solid var(--secondary-color);
         }
     </style>
 @endsection

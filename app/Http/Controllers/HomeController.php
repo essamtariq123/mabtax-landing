@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\SubService;
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOMeta;
 
@@ -10,7 +11,10 @@ class HomeController extends Controller
 {
     public function index() {
         SEOMeta::setTitle('MabTax');
-        return view('welcome');
+
+        $services = SubService::where('is_featured', true)->with('service')->get();
+
+        return view('welcome', compact('services'));
     }
     
     public function taxCalculator() {

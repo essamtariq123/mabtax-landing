@@ -30,7 +30,8 @@ class SubServiceSeeder extends Seeder
                         'Latest paid electricity bill',
                         'Phone Number',
                         'Email address',
-                    ]
+                    ],
+                    'is_featured' => true
                 ],
 
                 [
@@ -44,7 +45,8 @@ class SubServiceSeeder extends Seeder
                         'Email address',
                         'Rent agreement/ownership docs of Office premises',
                         'Letterhead'
-                    ]
+                    ],
+                    'is_featured' => true
 
                 ],
                 [
@@ -508,7 +510,8 @@ class SubServiceSeeder extends Seeder
                         'Power of attorney',
                         'Other Information or Documents as required',
 
-                    ]
+                    ],
+                    'is_featured' => true
                 ],
 
                 [
@@ -533,24 +536,24 @@ class SubServiceSeeder extends Seeder
             ],
         ];
 
-        foreach($sub_services as $key => $service) {
+        foreach ($sub_services as $key => $service) {
             $service = Service::where('title', $key)->first();
 
-            foreach($sub_services[$key] as $sub) {
+            foreach ($sub_services[$key] as $sub) {
                 $sub_service = SubService::create([
                     'title' => $sub['title'],
                     'price' => $sub['price'],
                     'other_price' => isset($sub['other_price']) ? $sub['other_price'] : null,
                     'time' => $sub['time'],
-                    'service_id' => $service->id
+                    'service_id' => $service->id,
+                    'is_featured' => isset($sub['is_featured'])
                 ]);
 
-                foreach($sub['requirements'] as $require) {
+                foreach ($sub['requirements'] as $require) {
                     $requirement = Requirement::where('title', $require)->first();
                     $sub_service->requirements()->attach($requirement->id);
                 }
             }
-            
         }
     }
 }

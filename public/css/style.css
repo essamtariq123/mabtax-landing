@@ -8854,11 +8854,11 @@ Client Area
   text-align: center;
 }
 .single-price-plan-01 .price-footer .btn-wrapper .boxed-btn {
-  background-image: linear-gradient(-90deg, #f738f5 0%, #fd5980 100%);
+  background-image: linear-gradient(-125deg,#fb3c7f 0%,#ffc05e 100%);
   padding: 12px 40px;
 }
 .single-price-plan-01 .price-footer .btn-wrapper .boxed-btn:hover {
-  background-image: linear-gradient(90deg, #f738f5 0%, #fd5980 100%);
+  background-image: linear-gradient(125deg,#fb3c7f 0%,#ffc05e 100%);
 }
 
 .single-price-plan-02 {

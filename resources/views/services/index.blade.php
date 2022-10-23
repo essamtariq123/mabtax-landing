@@ -25,11 +25,11 @@
                                 </div>
                                 <div class="right-column">
                                     <div class="title__price">
-                                        <h4>Rs. {{ $service->price }}</h4>
+                                        <h4>Rs. {{ $service->formatted_price }}</h4>
                                     </div>
                                     @isset($service->other_price)
                                         <div class="title__price">
-                                            <h4>Rs. {{ $service->other_price }}</h4>
+                                            <h4>Rs. {{ $service->formatted_other_price }}</h4>
                                         </div>
                                     @endisset
                                 </div>

@@ -30,7 +30,7 @@
         </div>
         <div class="nav-right-content">
             <div class="btn-wrapper">
-                <a target="_blank" href="https://wa.me/923214499907" class="boxed-btn btn-business">Get In Touch</a>
+                <a target="_blank" href="https://customer.mabtax.com/register" class="boxed-btn btn-business">Sign Up</a>
             </div>
         </div>
     </div>

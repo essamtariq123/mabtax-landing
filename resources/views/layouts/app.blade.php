@@ -73,6 +73,8 @@
 
     @yield('modal')
 
+    @include('cookie-consent::index')
+
     <!-- preloader area start -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">

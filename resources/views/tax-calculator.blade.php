@@ -164,7 +164,7 @@
                 document.getElementById("monthlySalary").innerHTML = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 document.getElementById("monthlyTax").innerHTML = monthlyTax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 document.getElementById("monthlySalaryAfterTax").innerHTML = afterTax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                document.getElementById("yearlySalary").innerHTML = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                document.getElementById("yearlySalary").innerHTML = yearly.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 document.getElementById("yearlyTax").innerHTML = yearlyTax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 document.getElementById("yearlySalaryAfterTax").innerHTML = yearlyAfterTax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 

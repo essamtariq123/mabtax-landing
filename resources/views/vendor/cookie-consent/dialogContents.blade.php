@@ -29,9 +29,9 @@
             {{ trans('cookie-consent::texts.agree') }}
         </a>
         
-        <a href="#!" class="js-cookie-consent-decline cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
+        {{-- <a href="#!" class="js-cookie-consent-decline cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
           Decline
-        </a>
+        </a> --}}
       </div>
     </div>
 </div>

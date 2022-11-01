@@ -19,6 +19,7 @@ class SubService extends Model
     }
 
     public function getFormattedPriceAttribute() {
+        
         return number_format($this->price);
     }
 

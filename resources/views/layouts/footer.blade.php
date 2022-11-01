@@ -12,9 +12,9 @@
                     <div class="widget widget_nav_menu">
                         <p>Follow us on</p>
                         <ul class="social_share style-01">
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/mabtax/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.facebook.com/MabTax.pk" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCYLRztLy1TX1uP5SaCdLwXw" target="_blank"><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright-area-inner">
-                        © Copyrights 2022 MabTax All rights reserved.
+                        © Copyrights 2022 MabTax All rights reserved. <a style="color: #ff6661" href="{{ route('terms') }}"> Terms and condition</a>
                     </div>
                 </div>
             </div>

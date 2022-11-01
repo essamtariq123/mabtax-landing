@@ -22,6 +22,11 @@ class HomeController extends Controller
         return view('tax-calculator');
     }
 
+    public function terms() {
+        SEOMeta::setTitle('Terms and condition');
+        return view('terms');
+    }
+
     public function ntnStatus() {
         SEOMeta::setTitle('NTN Status');
         return view('ntn-status');

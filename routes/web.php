@@ -28,6 +28,7 @@ Route::get('/tax-calculator', [HomeController::class,'taxCalculator'])->name('ta
 Route::get('/ntn-status', [HomeController::class,'ntnStatus'])->name('ntn-status');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/services', [HomeController::class,'services'])->name('services');
+Route::get('/terms-and-condition', [HomeController::class,'terms'])->name('terms');
 
 // Route::view('/', 'welcome')->name('home');
 // Route::view('/tax-calculator', 'tax-calculator')->name('tax-calculator');

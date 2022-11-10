@@ -23,16 +23,25 @@
                                         <h4>{{ $service->title }}</h4>
                                     </div>
                                 </div>
-                                <div class="right-column">
-                                    <div class="title__price">
-                                        <h4>Rs. {{ $service->formatted_price }}</h4>
-                                    </div>
-                                    @isset($service->other_price)
+                                @if ($service->formatted_price !== 0)
+                                    <div class="right-column">
                                         <div class="title__price">
-                                            <h4>Rs. {{ $service->formatted_other_price }}</h4>
+                                            <h4>Rs. {{ $service->formatted_price }}</h4>
                                         </div>
-                                    @endisset
-                                </div>
+                                        @isset($service->other_price)
+                                            <div class="title__price">
+                                                <h4>Rs. {{ $service->formatted_other_price }}</h4>
+                                            </div>
+                                        @endisset
+                                    </div>
+                                @else
+                                    <div class="right-column">
+                                        <div class="title__price">
+                                            <h4>Free</h4>
+                                        </div>
+                                    </div>
+                                @endif
+
                             </div>
 
                             @isset($service->time)
@@ -80,72 +89,72 @@
     </div>
 @endsection
 @section('modal')
-@foreach($services->sub_services as $key => $service)
-<div class="modal" id="service{{ $key }}" tabindex="-1" role="dialog"
-    aria-labelledby="serviceLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="serviceLabel">Have queries? Talk to an expert</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="contact-form style-01">
-                    <form action="{{ route('service-query') }}" class="contact-page-form" method="POST">
-                        @csrf
-                        <div class="row">
-                            @if (session()->has('message'))
-                                <div class="col-md-12">
-                                    <div class="alert alert-success">
-                                        {{ session()->get('message') }}
-                                        <button type="button" class="close" data-dismiss="alert"
-                                            aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            @endif
+    @foreach ($services->sub_services as $key => $service)
+        <div class="modal" id="service{{ $key }}" tabindex="-1" role="dialog" aria-labelledby="serviceLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceLabel">Have queries? Talk to an expert</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="contact-form style-01">
+                            <form action="{{ route('service-query') }}" class="contact-page-form" method="POST">
+                                @csrf
+                                <div class="row">
+                                    @if (session()->has('message'))
+                                        <div class="col-md-12">
+                                            <div class="alert alert-success">
+                                                {{ session()->get('message') }}
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    @endif
 
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="phone">Phone <span>*</span></label>
-                                    <input type="text" name="phone" placeholder="Type Phone Number"
-                                        class="form-control" required="" aria-required="true">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="email">Email Address <span>*</span></label>
-                                    <input type="text" name="email" placeholder="Type Email Address"
-                                        class="form-control" required="" aria-required="true">
-                                </div>
-                            </div>
-                            <input type="text" name="service" placeholder="Type Email Address"
-                                        class="form-control" required="" value="{{ $service->title }}"
-                                        aria-required="true" hidden>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="message">Query</label>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="phone">Phone <span>*</span></label>
+                                            <input type="text" name="phone" placeholder="Type Phone Number"
+                                                class="form-control" required="" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="email">Email Address <span>*</span></label>
+                                            <input type="text" name="email" placeholder="Type Email Address"
+                                                class="form-control" required="" aria-required="true">
+                                        </div>
+                                    </div>
                                     <input type="text" name="service" placeholder="Type Email Address"
                                         class="form-control" required="" value="{{ $service->title }}"
-                                        aria-required="true" disabled>
+                                        aria-required="true" hidden>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="message">Query</label>
+                                            <input type="text" name="service" placeholder="Type Email Address"
+                                                class="form-control" required="" value="{{ $service->title }}"
+                                                aria-required="true" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="submit" value="Send Message" class="submit-btn style-01">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="submit" value="Send Message" class="submit-btn style-01">
-                                </div>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-@endforeach
+    @endforeach
 @endsection
 @section('styles')
     <style>

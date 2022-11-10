@@ -54,7 +54,7 @@
                             </div>
                             <div class="price-wrap mb-3">
                                 {{-- <span class="price">$0</span><span class="month">/mo</span> --}}
-                                @if($service->formatted_price !== '0')
+                                @if($service->formatted_price != '0')
                                 <span class="price">RS {{ $service->formatted_price }}</span>
                                 @else
                                 <span class="price">Free</span>

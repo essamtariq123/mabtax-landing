@@ -23,7 +23,7 @@
                                         <h4>{{ $service->title }}</h4>
                                     </div>
                                 </div>
-                                @if ($service->formatted_price !== '0')
+                                @if ($service->formatted_price != '0')
                                     <div class="right-column">
                                         <div class="title__price">
                                             <h4>Rs. {{ $service->formatted_price }}</h4>

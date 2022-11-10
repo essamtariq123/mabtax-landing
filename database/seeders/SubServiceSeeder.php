@@ -22,7 +22,7 @@ class SubServiceSeeder extends Seeder
 
             'Income Tax Return' => [
                 [
-                    'price' => 400,
+                    'price' => 0,
                     'time' => '1 - 2 Working Days',
                     'title' => 'NTN Registration – Salaried',
                     'requirements' => [
@@ -46,7 +46,6 @@ class SubServiceSeeder extends Seeder
                         'Rent agreement/ownership docs of Office premises',
                         'Letterhead'
                     ],
-                    'is_featured' => true
 
                 ],
                 [
@@ -369,7 +368,8 @@ class SubServiceSeeder extends Seeder
                         'Name of declarant person',
                         'SECP login details of the proposed directors / subscribers(if any)',
 
-                    ]
+                    ],
+                    'is_featured' => true
 
                 ],
 
@@ -490,7 +490,8 @@ class SubServiceSeeder extends Seeder
                         'Residential address of holder or Letterhead of the Business',
                         'Other Information or Documents as required',
 
-                    ]
+                    ],
+                    'is_featured' => true
 
 
                 ],
@@ -511,7 +512,6 @@ class SubServiceSeeder extends Seeder
                         'Other Information or Documents as required',
 
                     ],
-                    'is_featured' => true
                 ],
 
                 [

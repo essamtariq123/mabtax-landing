@@ -54,7 +54,11 @@
                             </div>
                             <div class="price-wrap mb-3">
                                 {{-- <span class="price">$0</span><span class="month">/mo</span> --}}
+                                @if($service->formatted_price !== 0)
                                 <span class="price">RS {{ $service->formatted_price }}</span>
+                                @else
+                                <span class="price">Free</span>
+                                @endif
                             </div>
                             {{-- <div class="price-body">
                             <ul>
@@ -81,9 +85,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-title white brand desktop-center padding-bottom-50">
-                            <h3 class="title">What we do</h3>
-                            <p>Each time a digital asset is purchased or sold, Sequoir donates a percentage of the fees back
-                                into the development of the asset through its charitable foundation.</p>
+                            <h3 class="title">Our clients mean everything to us!</h3>
+                            <p>Join us as we bring advisory sector into digital age.</p>
                         </div>
                     </div>
                 </div>

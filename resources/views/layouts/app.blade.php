@@ -74,7 +74,7 @@
     <chat-widget
         style="--chat-widget-primary-color: #188bf6; --chat-widget-active-color:#188bf6 ;--chat-widget-bubble-color: #188bf6"
         location-id="SzEsnCL68phl5AOPtase"
-        revisit-prompt-msg="Welcome back {{ name }}, how can we help you today?"
+        revisit-prompt-msg="Welcome back, how can we help you today?"
         prompt-avatar="https://firebasestorage.googleapis.com/v0/b/highlevel-backend.appspot.com/o/locationPhotos%2FSzEsnCL68phl5AOPtase%2Fchat-widget-person?alt=media&token=1fd86cc8-fba8-45b3-a40d-ee1f1d63c655">
     </chat-widget>
     <script src="https://widgets.leadconnectorhq.com/loader.js"
